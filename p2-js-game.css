@@ -1,0 +1,229 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-image: url(./deckOfCards/background.jpg) ;
+    background-size: cover;
+    padding: 3vh 0 3vh 0;
+    color:white;
+    display: grid;
+    place-items: center;
+    font-family: 'Gemunu Libre';
+}
+
+h1{
+    text-align: center;
+    margin: 3vh;
+    letter-spacing: 6px;
+    font-size: 60px;
+}
+
+h2{
+    font-size:2em;
+    margin-bottom: 1.5vh;
+    text-align: center;
+}
+
+h3{
+    font-size:70px;
+}
+.cardImage img{
+    width: 210px;
+    height: 290px;
+    margin:10px;
+}
+
+#dealerCards{
+    margin:1.5rem;
+}
+
+#playerCards{
+    margin:1.5rem;
+}
+
+
+.flexButton{
+    display: flex;
+    flex-flow: row wrap;
+    gap:50px
+
+}
+
+.flexBlackjack{
+    display: flex;
+    flex-flow: row wrap;
+    gap:70px;
+    margin-left:190px;
+}
+
+.buttonClass:hover:enabled, .popupButtons:hover{
+    color:rgba(133, 133, 133, 0.4);
+    border-color: rgba(133, 133, 133, 0.4);
+    cursor:grab;
+}
+
+.buttonClass:disabled{
+    opacity:0.2;
+}
+
+.hidden{
+    display:none;
+}
+
+.buttonClass{
+    margin-top: 3vh;
+    background-color: rgba(0,0,0,0.6);
+    padding:2vh 3vh 2vh 3vh;
+    color: white;
+    border: 4px solid white;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Gemunu Libre';
+    
+}
+
+.popupButtons{
+    margin-top: 3vh;
+    background-color: rgba(0,0,0,0.6);
+    padding:2vh 3vh 2vh 3vh;
+    color: white;
+    border: 4px solid white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Gemunu Libre';
+    
+}
+
+
+
+.tutorialBox {
+    background-color:  rgba(0,0,0,0.9);
+    position:fixed;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-45%);
+    border: 4px solid white;
+    border-radius: 25px;
+    padding:4vh;
+    z-index: 10;
+}
+
+.tutorialBox p {
+    font-size: 30px;
+    padding-bottom:30px;
+    letter-spacing: 1px;
+    color:white;
+}
+
+.tutorialBox-title{
+    padding: 1vh 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    margin-bottom:2vh;
+}
+
+
+#dealerTotal, #playerTotal{
+    font-size: 2em;
+    margin: 1.3vh;
+}
+
+#Result{
+    font-size: 2em;
+    margin: 2.5vh;
+    font-weight: 800;
+
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size:1.7em;
+    }
+    h3{
+        font-size: 60px;
+    }
+    .cardImage img{
+        width: 170px;
+        height: 240px;
+        margin:6px;
+    }
+
+    .tutorialBox{
+        top:55%;
+    }
+    .tutorialBox p{
+        font-size:20px;
+    }
+    .flexBlackjack{
+        gap:25px;
+    }
+    .buttonClass{
+        padding:1.6vh 2.6vh 1.6vh 2.6vh;
+        font-size: 22px;
+    }
+    .popupButtons{
+        padding:1.6vh 2.6vh 1.6vh 2.6vh;
+        font-size: 35px;
+
+    }
+    #Result{
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:768px) {
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size:1.5em;
+    }
+    h3{
+        font-size: 50px;
+    }
+    .cardImage img{
+        width: 140px;
+        height: 200px;
+        margin:3px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tutorialBox{
+        top:50%;
+    }
+    .tutorialBox p{
+        font-size:15px;
+    }
+    .flexBlackjack{
+        gap:10px;
+    }
+    .buttonClass{
+        padding:1.4vh 2.4vh 1.4vh 2.4vh;
+        font-size: 18px;
+    }
+    .popupButtons{
+        padding:1vh 2vh 1vh 2vh;
+        font-size: 30px;
+
+    }
+    #dealerTotal, #playerTotal{
+        font-size: 1.5em;
+
+    }
+    #Result{
+        font-size: 1.5em;
+    }
+ 
+}

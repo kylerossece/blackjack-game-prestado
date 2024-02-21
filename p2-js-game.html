@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="p2-js-game.css">
+    <link rel="icon" href="./deckOfCards/back_card.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flexBlackjack">
+
+    <h1>BLACKJACK</h1>
+
+    <button class="popupButtons" id="tutorialButton" >?</button>
+
+    </div>
+
+    <div id="dealerCards" class="cardImage">
+
+        <h2>Dealer Cards:</h2>
+        <img src="./deckOfCards/back_card.png" alt="backCard">
+        <img src="./deckOfCards/back_card.png" id=faceDownCard alt="backCard">
+
+    </div>
+    
+    <button class="buttonClass" id="newGameButton">New Game</button>
+
+    <button class="buttonClass" id="blogButton" onclick="document.location.href= 'p2-blog.html';">Blog</button>
+
+    <div id="dealerTotal"></div>
+
+
+    <div id="playerCards" class="cardImage">
+
+        <h2>Player Cards:</h2>
+
+    </div>
+
+    <div id="playerTotal"></div>
+
+    <div class="flexButton">
+
+    <button class="buttonClass" id="hitButton">Hit</button>
+
+    <button class="buttonClass" id="standButton" onclick="disableStand()">Stand</button>
+
+    <button class="buttonClass" id="playAgainButton" onclick="playAgain()">Play Again</button>
+
+    </div>
+
+    <span id="Result"></span>
+
+
+    <dialog class="tutorialBox">
+       
+        <div class="tutorialBox-title">
+
+        <h3>Tutorial</h3>
+
+        <button class ="popupButtons" id="closeButton">&#215;</button>
+
+        </div>
+        
+        <p>
+        Blackjack is a card game where players aim to have a higher sum of cards than the dealer but 
+        not exceeding 21.
+        </p>
+
+        <p> 
+        Ace can have a value of 1 or 11, face cards are counted as 10, and numbered cards have its value as is .
+        (Ex. A Jack of Clubs is a 10 while a Seven of Hearts is counted as 7).
+        </p>
+
+        <p>
+        A player initially has two face-up cards while the dealer has a face-up and a face-down card.
+        </p>
+
+        <p>
+        A player can Hit as much as they want which draws a card from the deck and Stand
+        which retains the player's current card. The dealer are forced to hit once if their sum is 16 and stand if their
+        sum is 17.
+        </p>
+        
+        <p>
+        The dealer reveals the face-down card once the player stands or is busted(sum over 21).
+        </p>
+
+        <p>
+        The player also wins once the dealer goes bust.
+        </p>
+
+    </dialog>
+    
+     
+    <script src="p2-js-game.js"></script>
+    
+</body>
+   
+
+</html>
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/p2-js-game.html"
+status = 200
